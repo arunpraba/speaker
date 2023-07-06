@@ -13,9 +13,7 @@ function splitSentences(text) {
 export default function App() {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [speakingIndex, setSpeakingIndex] = useState(null);
-  const [text, setText] = useState(
-    `• Relative elements position themselves in relation to their normal position in the document flow.\n• Fixed elements position relative to the browser viewport, staying put even when the page scrolls.\n• Absolute elements position in relation to their closest positioned ancestor.\n• Static elements, the default, follow the document flow, ignoring ‘top’, ‘bottom’, ‘left’, ‘right’ values treated as offsets.\n• Relative, absolute and fixed remove elements from the flow, overlaying others, allowing precise positioning, while static follows the flow.`
-  );
+  const [text, setText] = useState(``);
 
   const speak = (value, index) => {
     if (isSpeaking && speakingIndex === index) {
